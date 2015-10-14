@@ -1,3 +1,15 @@
 Respuestas a las preguntas de la práctica 3
 
  3.- ¿Cuál es la ventaja de reorganizar (rebase)?
+¿Qué es una reorganización (rebase)?
+
+Cuando se trabaja con ramas en Git , en algún momento el trabajo realizado en una rama sera fusionado con otra rama. Hay dos formas de fusionar, utilizando el comando merge o el comando rebase, el resultado es el mismo,fusionar el trabajo de dos ramas ,la diferencia es como  realiza la fusión.
+La alternativa a merge es el comando rebase,este comando nos deja un historial mas “limpio” reorganizando los commits para tener un “historial lineal”.
+
+Por ejemplo.:
+--------------
+Tenemos dos ramas; desarrollo y master, vamos a utilizar rebase para fusionar la rama desarrollo con master.
+Se va a fusionar la rama desarrollo en la rama master, nos situamos en la rama master y ejecutamos
+Este comando rebase mueve todos los commit de la rama desarrollo a continuación del  último commit de la rama master. A continuación actualizamos el apuntador master.
+Realiza un fast-forward y el apuntador master se sitúa en el último commit, ahora tenemos un historial lineal.
+
